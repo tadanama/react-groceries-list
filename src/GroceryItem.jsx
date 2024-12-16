@@ -10,7 +10,11 @@ function GroceryItem({ grocerie, handleCheck, handleDelete }) {
 				checked={grocerie.checked}
 				onChange={() => handleCheck(grocerie.id)}
 			/>
-			<label> {grocerie.text}</label>
+			<label
+				style={{ textDecoration: grocerie.checked ? "line-through" : null }}
+			>
+				{grocerie.text}
+			</label>
 
 			<FontAwesomeIcon
 				icon={faTrash}
