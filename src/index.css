@@ -40,3 +40,19 @@ main {
 	width: 100%;
 	margin-inline: 10px;
 }
+
+/* Add form */
+.add-form {
+	display: flex;
+	padding: 10px 20px;
+}
+
+.add-form input {
+	flex-grow: 1;
+  font-size: 20px;
+}
+
+.add-form input,
+.add-form button {
+	padding: 10px 15px;
+}
