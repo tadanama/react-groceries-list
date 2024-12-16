@@ -2,12 +2,20 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-function GroceryItem({ grocerie }) {
+function GroceryItem({ grocerie, handleCheck, handleDelete }) {
 	return (
-		<article className="list-item" >
-			<input type="checkbox" checked={grocerie.checked}/>
+		<article className="list-item">
+			<input
+				type="checkbox"
+				checked={grocerie.checked}
+				onChange={() => handleCheck(grocerie.id)}
+			/>
 			<label> {grocerie.text}</label>
-			<FontAwesomeIcon icon={faTrash} />
+
+			<FontAwesomeIcon
+				icon={faTrash}
+				onClick={() => handleDelete(grocerie.id)}
+			/>
 		</article>
 	);
 }
