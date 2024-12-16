@@ -1,15 +1,36 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+
+import GroceryItem from "./GroceryItem";
 
 function GroceriesList() {
+	const [groceries, setGroceries] = useState([
+		{
+			id: 1,
+			checked: false,
+			text: "Eggs",
+		},
+		{
+			id: 2,
+			checked: false,
+			text: "Chicken",
+		},
+		{
+			id: 3,
+			checked: false,
+			text: "Oats",
+		},
+	]);
+
 	return (
 		<main>
-			<article className="list-item">
-				<input type="checkbox" />
-				<label> Item number 1</label>
-				<FontAwesomeIcon icon={faTrash} />
-			</article>
+
+			{groceries.length ? (
+				groceries.map((grocerie) => {
+					return <GroceryItem grocerie={grocerie} key={grocerie.id} />;
+				})
+			) : (
+				<p>You have no items</p>
+			)}
 		</main>
 	);
 }
