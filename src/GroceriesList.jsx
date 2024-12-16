@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import GroceryItem from "./GroceryItem";
 
-function GroceriesList({ groceries, setGroceries }) {
+function GroceriesList({ groceries, setGroceries, search }) {
 	function handleCheck(id) {
 		console.log("Checking for item", id);
 
@@ -31,7 +31,7 @@ function GroceriesList({ groceries, setGroceries }) {
 					);
 				})
 			) : (
-				<p>You have no items</p>
+				search ? <p>No item matched</p> : <p>You have no items</p>
 			)}
 		</main>
 	);
