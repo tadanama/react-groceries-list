@@ -1,3 +1,4 @@
+import AddForm from "./AddForm";
 import Footer from "./Footer";
 import GroceriesList from "./GroceriesList";
 import Header from "./Header";
@@ -7,8 +8,9 @@ function App() {
 		<>
 			<div className="app">
 				<Header />
-        <GroceriesList />
-        <Footer />
+				<AddForm />
+				<GroceriesList />
+				<Footer />
 			</div>
 		</>
 	);
