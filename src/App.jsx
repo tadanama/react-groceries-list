@@ -23,6 +23,7 @@ function App() {
 			text: "Oats",
 		},
 	]);
+	const [search, setSearch] = useState("");
 
 	function addNewGrocery(newItem) {
 		setGroceries((prevItem) => [...prevItem, newItem]);
@@ -32,9 +33,15 @@ function App() {
 		<>
 			<div className="app">
 				<Header />
-				<Search />
+				<Search search={search} setSearch={setSearch} />
 				<AddForm groceries={groceries} addNewGrocery={addNewGrocery} />
-				<GroceriesList groceries={groceries} setGroceries={setGroceries} />
+				<GroceriesList
+					groceries={search ? groceries.filter((item) =>
+						item.text.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+					) : groceries}
+					setGroceries={setGroceries}
+					search={search}
+				/>
 				<Footer />
 			</div>
 		</>
