@@ -1,7 +1,15 @@
+import Footer from "./Footer";
+import GroceriesList from "./GroceriesList";
+import Header from "./Header";
+
 function App() {
 	return (
 		<>
-			<h1>Hi</h1>
+			<div className="app">
+				<Header />
+        <GroceriesList />
+        <Footer />
+			</div>
 		</>
 	);
 }
