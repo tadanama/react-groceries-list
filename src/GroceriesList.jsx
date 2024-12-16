@@ -2,25 +2,7 @@ import React, { useState } from "react";
 
 import GroceryItem from "./GroceryItem";
 
-function GroceriesList() {
-	const [groceries, setGroceries] = useState([
-		{
-			id: 1,
-			checked: false,
-			text: "Eggs",
-		},
-		{
-			id: 2,
-			checked: false,
-			text: "Chicken",
-		},
-		{
-			id: 3,
-			checked: false,
-			text: "Oats",
-		},
-	]);
-
+function GroceriesList({ groceries, setGroceries }) {
 	function handleCheck(id) {
 		console.log("Checking for item", id);
 
