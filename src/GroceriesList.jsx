@@ -31,7 +31,7 @@ function GroceriesList({ groceries, setGroceries, search }) {
 					);
 				})
 			) : (
-				search ? <p>No item matched</p> : <p>You have no items</p>
+				search ? <p>No item matched.</p> : <p>You have no items.</p>
 			)}
 		</main>
 	);
