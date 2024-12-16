@@ -3,3 +3,40 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+.app {
+	min-height: 100vh;
+	max-width: 700px;
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 2px solid;
+}
+
+/* Header and footer */
+header,
+footer {
+	background-color: black;
+	color: white;
+	padding: 20px 25px;
+}
+
+/* Groceries list */
+main {
+	margin-top: 20px;
+	flex-grow: 1;
+}
+
+.list-item {
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+
+.list-item label {
+	width: 100%;
+	margin-inline: 10px;
+}
