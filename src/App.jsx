@@ -22,11 +22,16 @@ function App() {
 			text: "Oats",
 		},
 	]);
+
+	function addNewGrocery(newItem) {
+		setGroceries((prevItem) => [...prevItem, newItem]);
+	}
+
 	return (
 		<>
 			<div className="app">
 				<Header />
-				<AddForm />
+				<AddForm groceries={groceries} addNewGrocery={addNewGrocery} />
 				<GroceriesList groceries={groceries} setGroceries={setGroceries} />
 				<Footer />
 			</div>
