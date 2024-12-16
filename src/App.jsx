@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import GroceriesList from "./GroceriesList";
 import Header from "./Header";
 import { useState } from "react";
+import Search from "./Search";
 
 function App() {
 	const [groceries, setGroceries] = useState([
@@ -31,6 +32,7 @@ function App() {
 		<>
 			<div className="app">
 				<Header />
+				<Search />
 				<AddForm groceries={groceries} addNewGrocery={addNewGrocery} />
 				<GroceriesList groceries={groceries} setGroceries={setGroceries} />
 				<Footer />
